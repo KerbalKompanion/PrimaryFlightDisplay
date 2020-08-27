@@ -10,11 +10,11 @@ import SpriteKit
 
 extension Int {
     
-    var radians: CGFloat {
+    public var radians: CGFloat {
         return CGFloat.radiansPerDegree * CGFloat(self)
     }
     
-    var compassValue: Double {
+    public var compassValue: Double {
         return Double(self).compassValue
     }
 }

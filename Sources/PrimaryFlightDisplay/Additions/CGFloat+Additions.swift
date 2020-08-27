@@ -10,11 +10,11 @@ import SpriteKit
 
 extension CGFloat {
     
-    static var degreesPerRadian: CGFloat {
+    public static var degreesPerRadian: CGFloat {
        return CGFloat(180.0 / .pi)
     }
     
-    static var radiansPerDegree: CGFloat {
+    public static var radiansPerDegree: CGFloat {
        return CGFloat(.pi / 180.0)
     }
 }

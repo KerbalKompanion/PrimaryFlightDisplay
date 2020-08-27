@@ -7,7 +7,7 @@
 //
 
 extension Double {
-    var compassValue: Double {
+    public var compassValue: Double {
         var value = self.truncatingRemainder(dividingBy: 360)
         
         if value < 0 {

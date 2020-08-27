@@ -10,11 +10,11 @@ import SpriteKit
 
 extension CGSize {
     
-    var pointsPerDegree: CGFloat {
+    public var pointsPerDegree: CGFloat {
         return (height / 2) / CGFloat(90)
     }
     
-    var pointsPerRadian: CGFloat {
+    public var pointsPerRadian: CGFloat {
         return CGFloat.degreesPerRadian * pointsPerDegree
     }
 }

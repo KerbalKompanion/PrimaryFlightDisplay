@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-protocol AttitudeType {
+public protocol AttitudeType {
     var rollRadians: Double { get }
     var pitchRadians: Double { get }
     
@@ -17,27 +17,27 @@ protocol AttitudeType {
     func pitchReverseAction(sceneSize: CGSize) -> SKAction
 }
 
-protocol AttitudeSettable {
+public protocol AttitudeSettable {
     func setAttitude(_ attitude: AttitudeType)
 }
 
 extension AttitudeType {
-    func rollAction() -> SKAction {
+    public func rollAction() -> SKAction {
         return SKAction.rotate(toAngle: CGFloat(rollRadians), duration: 0.05, shortestUnitArc: true)
     }
     
-    func pitchAction(sceneSize: CGSize) -> SKAction {
+    public func pitchAction(sceneSize: CGSize) -> SKAction {
         let displacement = CGFloat(pitchRadians) * -1 * sceneSize.pointsPerRadian
         return SKAction.moveTo(y: displacement, duration: 0.05)
     }
     
-    func pitchReverseAction(sceneSize: CGSize) -> SKAction {
+    public func pitchReverseAction(sceneSize: CGSize) -> SKAction {
         let displacement = CGFloat(pitchRadians) * sceneSize.pointsPerRadian
         return SKAction.moveTo(y: displacement, duration: 0.05)
     }
 }
 
-struct Attitude: AttitudeType {
-    let pitchRadians: Double
-    let rollRadians: Double
+public struct Attitude: AttitudeType {
+    public let pitchRadians: Double
+    public let rollRadians: Double
 }
